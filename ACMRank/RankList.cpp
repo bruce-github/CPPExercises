@@ -52,7 +52,7 @@ void RankList::submit(unsigned int teamID, unsigned int problemID, unsigned int 
 
 	Team *pObj = index->second;
 
-	if (pObj->update(problemID, time, passed))
+	if (pObj->update(problemID, time - startTime, passed))
 	{
 		Team *pPos = findPos(pObj);
 		if (pPos != pObj)
